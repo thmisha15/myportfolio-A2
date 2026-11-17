@@ -1,0 +1,89 @@
+<%# LECTURE: MEAN Stack Development, slides 98, 103-104 (EJS templates). %>
+<%- include('partials/header') %>
+<main class="page-width content-section">
+  <p class="eyebrow dark">
+    LET'S CONNECT
+  </p>
+  <h1>
+    Contact Me
+  </h1>
+  <p class="lead">
+    Interested in connecting about technology, projects or opportunities?
+  </p>
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <!-- LECTURE: MEAN Stack Development, slides 20-21 (browser events); -->
+      <!-- see public/js/main.js for submit event handler. -->
+      <!-- PROJECT IMPLEMENTATION: validation and mailto draft only, no server storage. -->
+      <form class="contact-form h-100" id="contact-form">
+        <label for="visitor-name">
+          Full name *
+        </label>
+        <input id="visitor-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+        <label for="visitor-email">
+          Email address *
+        </label>
+        <input id="visitor-email" name="email" type="email" autocomplete="email" required>
+        <label for="visitor-phone">
+          Phone number (optional)
+        </label>
+        <input id="visitor-phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9()+. -]{10,20}" title="Use 10–20 digits or common phone punctuation.">
+        <label for="visitor-message">
+          Your message *
+        </label>
+        <textarea id="visitor-message" name="message" rows="6" maxlength="2000" required>
+        </textarea>
+        <button class="button mt-3" type="submit">
+          <i class="fa-solid fa-envelope me-2">
+          </i>
+          Prepare email
+        </button>
+        <p class="form-note mt-3">
+          Opens your email application; no messages are stored or sent by this website.
+        </p>
+      </form>
+    </div>
+    <aside class="col-lg-5">
+      <div class="contact-aside h-100 w-100">
+        <h2>
+          Other ways to connect
+        </h2>
+        <p>
+          <strong>
+            Email
+          </strong>
+          <br>
+          <a href="mailto:thmisha15@hotmail.com">
+            thmisha15@hotmail.com
+          </a>
+        </p>
+        <p>
+          <strong>
+            LinkedIn
+          </strong>
+          <br>
+          <a href="https://www.linkedin.com/in/thmisha/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/thmisha
+          </a>
+        </p>
+        <p>
+          <strong>
+            GitHub
+          </strong>
+          <br>
+          <a href="https://github.com/thmisha15" target="_blank" rel="noopener noreferrer">
+            github.com/thmisha15
+          </a>
+        </p>
+        <p>
+          <strong>
+            Location
+          </strong>
+          <br>
+          Toronto, Ontario
+        </p>
+      </div>
+    </aside>
+  </div>
+</main>
+<%- include('partials/footer') %>
