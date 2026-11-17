@@ -1,8 +1,6 @@
-// INFR3120 Assignment 2: Express Generator-style application configuration.
 // LECTURE: MEAN Stack Development, slides 76-77 (Express and modular structure).
-// NOTE: This scaffold is generator-style; verify the generator command was actually
-// run locally, as required by the assignment. Page routes live in routes/index.js.
 // LECTURE: MEAN Stack Development, slides 44-47, 53 (CommonJS require).
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -33,7 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // PROJECT IMPLEMENTATION: 404 handler for URLs without a matching page.
-// Not a copied example from either supplied lecture.
 app.use(function (req, res, next) {
   next(createError(404));
 });
