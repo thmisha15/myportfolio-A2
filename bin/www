@@ -1,20 +1,25 @@
+
 #!/usr/bin/env node
-// LECTURE: MEAN Stack Development, slides 59-60 and 81-82 (HTTP server/listen),
-// slides 44-47 (CommonJS require). The exact startup file and normalizePort()
-// are scaffold/application code, NOT copied from the lecture.
-// DEPLOYMENT: Render provides the PORT environment variable.
-var app = require('../app');
-var http = require('http');
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-var server = http.createServer(app);
-server.listen(port);
-server.on('error', function(error) { console.error(error); process.exit(1); });
-server.on('listening', function() { console.log('Listening on port ' + port); });
-// PROJECT CONFIGURATION: accept a numeric port, or a named pipe if provided.
-function normalizePort(value) {
-  var parsedPort = parseInt(value, 10);
-  if (isNaN(parsedPort)) return value;
-  if (parsedPort >= 0) return parsedPort;
-  return false;
-}
+
+// LECTURE: MEAN Stack Development, slides 59-60.
+// Topic: Creating an HTTP server and listening on port 3000.
+
+// LECTURE: MEAN Stack Development, slides 44-47.
+// Topic: Loading modules using require().
+
+// Import the Express application from app.js.
+const app = require('../app');
+
+// Import Node.js built-in HTTP module.
+const http = require('http');
+
+// Use the cloud hosting port or port 3000 locally.
+const port = process.env.PORT || 3000;
+
+// Create the HTTP server using the Express application.
+const server = http.createServer(app);
+
+// Start listening for incoming requests.
+server.listen(port, function () {
+  console.log('Portfolio running at http://localhost:' + port);
+});
