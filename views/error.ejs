@@ -1,0 +1,21 @@
+<%# LECTURE: MEAN Stack Development, slides 98, 103-104 (EJS templates). %>
+
+<main class="page-width content-section">
+  <h1>
+    <%= message %>
+  </h1>
+  <p>
+    Sorry, we couldn't find that page.
+  </p>
+  <a class="button" href="/">
+    Back to home
+  </a>
+  <%# LECTURE: MEAN Stack Development, slide 104 (EJS tags). %>
+  <%# PROJECT IMPLEMENTATION: show stack trace only if Express supplied one. %>
+  <% if (error && error.stack) { %>
+    <pre>
+      <%= error.stack %>
+    </pre>
+  <% } %>
+</main>
+<%- include('partials/footer') %>

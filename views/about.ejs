@@ -1,0 +1,86 @@
+<%# LECTURE: MEAN Stack Development, slides 98, 103-104 (EJS templates). %>
+<%# PROJECT IMPLEMENTATION: About view uses a reusable header/footer partial. %>
+<%- include('partials/header') %>
+<main class="page-width content-section">
+  <p class="eyebrow dark">
+    GET TO KNOW ME
+  </p>
+  <h1>
+    About Me
+  </h1>
+  <!-- THIRD PARTY: Bootstrap grid aligns the biography and image placeholder. -->
+  <!-- PROJECT IMPLEMENTATION: profile photo/video placeholders because assets were not supplied. -->
+  <div class="row g-4 align-items-start">
+    <div class="col-lg-8">
+      <h2>
+        Hello, I'm Thmisha.
+      </h2>
+      <p>
+        I'm pursuing a Bachelor of Information Technology in Networking and IT Security at Ontario Tech University. I'm interested in technology, communication and thoughtful design.
+      </p>
+      <p>
+        At ThreatIQ, I work as a Content & Marketing Specialist, creating cybersecurity awareness content and digital marketing materials.
+      </p>
+      <p>
+        At Rossland Landing Dental Care, I work as a Dental Administrator and Social Media Coordinator, supporting patient communication, scheduling and social media content.
+      </p>
+      <p>
+        These experiences have strengthened my communication, teamwork, problem-solving and organizational skills.
+      </p>
+    </div>
+    <aside class="col-lg-4">
+      <div class="media-placeholder" role="img" aria-label="Profile photo not supplied">
+        <i class="fa-solid fa-user-circle fa-3x">
+        </i>
+        <p class="mt-3 mb-0">
+          Add your profile photo to public/images/profile-photo.jpg
+        </p>
+      </div>
+    </aside>
+  </div>
+  <section class="detail-section">
+    <h2>
+      Education & Skills
+    </h2>
+    <p>
+      <strong>
+        Ontario Tech University:
+      </strong>
+      Bachelor of Information Technology, Networking and IT Security (September 2023–present).
+    </p>
+    <p>
+      <strong>
+        Programming:
+      </strong>
+      Python, HTML/CSS and JavaScript.
+    </p>
+    <p>
+      <strong>
+        Training:
+      </strong>
+      CCNAv7: Introduction to Networks (2024); Angular for Beginners (2024).
+    </p>
+    <p>
+      <strong>
+        Tools:
+      </strong>
+      Dentrix, ABELDent, RecallMax and Microsoft Office.
+    </p>
+  </section>
+  <section class="detail-section">
+    <h2>
+      Introduction Video
+    </h2>
+    <p>
+      A short introduction to my studies, interests and goals.
+    </p>
+    <div class="media-placeholder">
+      <i class="fa-solid fa-video fa-2x">
+      </i>
+      <p class="mt-3 mb-0">
+        Add your video to public/videos/introduction-small.mp4 to display it here.
+      </p>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>
