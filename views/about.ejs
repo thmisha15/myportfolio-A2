@@ -1,86 +1,114 @@
-<%# LECTURE: MEAN Stack Development, slides 98, 103-104 (EJS templates). %>
+<%# LECTURE: MEAN Stack Development, slides 98, 103–104. %>
+<%# Topic: Rendering EJS templates and using shared views. %>
 
 <%- include('partials/header') %>
+
 <main class="page-width content-section">
-  <p class="eyebrow dark">
-    GET TO KNOW ME
-  </p>
-  <h1>
-    About Me
-  </h1>
-  <!-- THIRD PARTY: Bootstrap grid aligns the biography and image placeholder. -->
-  <!-- PROJECT IMPLEMENTATION: profile photo/video placeholders because assets were not supplied. -->
+
+  <p class="eyebrow dark">GET TO KNOW ME</p>
+  <h1>About Me</h1>
+
+  <!-- THIRD PARTY: Bootstrap grid for responsive layout. -->
   <div class="row g-4 align-items-start">
+
     <div class="col-lg-8">
-      <h2>
-        Hello, I'm Thmisha.
-      </h2>
+      <h2>Hello, I'm Thmisha.</h2>
+
       <p>
-        I'm pursuing a Bachelor of Information Technology in Networking and IT Security at Ontario Tech University. I'm interested in technology, communication and thoughtful design.
+        I'm pursuing a Bachelor of Information Technology
+        in Networking and IT Security at Ontario Tech University.
+        I'm interested in technology, communication and
+        thoughtful design.
       </p>
+
       <p>
-        At ThreatIQ, I work as a Content & Marketing Specialist, creating cybersecurity awareness content and digital marketing materials.
+        At ThreatIQ, I work as a Content & Marketing Specialist,
+        creating cybersecurity awareness content and
+        digital marketing materials.
       </p>
+
       <p>
-        At Rossland Landing Dental Care, I work as a Dental Administrator and Social Media Coordinator, supporting patient communication, scheduling and social media content.
+        At Rossland Landing Dental Care, I work as a Dental
+        Administrator and Social Media Coordinator,
+        supporting patient communication, scheduling
+        and social media content.
       </p>
+
       <p>
-        These experiences have strengthened my communication, teamwork, problem-solving and organizational skills.
+        These experiences have strengthened my communication,
+        teamwork, problem-solving and organizational skills.
       </p>
     </div>
+
+    <!-- LECTURE: MEAN Stack Development, slides 106–109. -->
+    <!-- Topic: Serving multimedia assets from the public folder. -->
     <aside class="col-lg-4">
-      <div class="media-placeholder" role="img" aria-label="Profile photo not supplied">
-        <i class="fa-solid fa-user-circle fa-3x">
-        </i>
-        <p class="mt-3 mb-0">
-          Add your profile photo to public/images/profile-photo.jpg
-        </p>
-      </div>
+
+      <img
+        src="/images/profile-photo.JPG"
+        alt="Portrait of Thmisha Rasanathan"
+        class="profile-image img-fluid rounded shadow"
+      >
+
     </aside>
+
   </div>
+
   <section class="detail-section">
-    <h2>
-      Education & Skills
-    </h2>
+
+    <h2>Education & Skills</h2>
+
     <p>
-      <strong>
-        Ontario Tech University:
-      </strong>
-      Bachelor of Information Technology, Networking and IT Security (September 2023–present).
+      <strong>Ontario Tech University:</strong>
+      Bachelor of Information Technology,
+      Networking and IT Security
+      (September 2023–present).
     </p>
+
     <p>
-      <strong>
-        Programming:
-      </strong>
+      <strong>Programming:</strong>
       Python, HTML/CSS and JavaScript.
     </p>
+
     <p>
-      <strong>
-        Training:
-      </strong>
-      CCNAv7: Introduction to Networks (2024); Angular for Beginners (2024).
+      <strong>Training:</strong>
+      CCNAv7: Introduction to Networks (2024);
+      Angular for Beginners (2024).
     </p>
+
     <p>
-      <strong>
-        Tools:
-      </strong>
+      <strong>Tools:</strong>
       Dentrix, ABELDent, RecallMax and Microsoft Office.
     </p>
+
   </section>
+
   <section class="detail-section">
-    <h2>
-      Introduction Video
-    </h2>
+
+    <h2>Introduction Video</h2>
+
     <p>
       A short introduction to my studies, interests and goals.
     </p>
-    <div class="media-placeholder">
-      <i class="fa-solid fa-video fa-2x">
-      </i>
-      <p class="mt-3 mb-0">
-        Add your video to public/videos/introduction-small.mp4 to display it here.
-      </p>
-    </div>
+
+    <!-- HTML5 video element. -->
+    <!-- LECTURE: MEAN Stack Development, slides 106–109. -->
+    <!-- Topic: Serving video files from the public folder. -->
+
+    <video
+      controls
+      preload="metadata"
+      class="intro-video img-fluid rounded shadow"
+    >
+      <source
+        src="/images/introduction-small.mp4"
+        type="video/mp4"
+      >
+      Your browser does not support HTML5 video.
+    </video>
+
   </section>
+
 </main>
+
 <%- include('partials/footer') %>
